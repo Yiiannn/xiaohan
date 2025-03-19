@@ -28,9 +28,9 @@ uploaded_file = st.file_uploader("请上传包含特定信息数据的表格文�
 if uploaded_file is not None:
     # 读取上传的文件
     if uploaded_file.name.endswith('.csv'):
-        data = pd.read_csv(uploaded_file,encoding="gbk")
+        data = pd.read_csv(uploaded_file,encoding="utf-8")
     elif uploaded_file.name.endswith('.xlsx'):
-        data = pd.read_excel(uploaded_file,encoding="gbk")
+        data = pd.read_excel(uploaded_file,encoding="utf-8")
 
 # 假设数据有三列，每列包含一个人的数据
     # 处理每个人的数据并预测
